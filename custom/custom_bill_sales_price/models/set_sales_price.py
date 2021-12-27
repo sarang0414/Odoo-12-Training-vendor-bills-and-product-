@@ -9,7 +9,6 @@ class SetVendorBillsSalesPrice(models.Model):
     @api.onchange('product_id')
     def onchange_bills_product_id(self):
         for rec in self:
-            print("Record lst price...",rec.product_id.lst_price)
             rec.selling_price = rec.product_id.lst_price
 
 
