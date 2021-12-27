@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="set_vendor_bill_sales_price_inherit" model="ir.ui.view">
+        <field name="name">set.vendor.bills.sales.price</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_supplier_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='price_unit']" position="after">
+                <field name="selling_price"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
